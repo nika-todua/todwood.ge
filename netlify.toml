@@ -1,0 +1,8 @@
+[build]
+  publish = "dist/nikatodua-com/browser"  # or "build" folder
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
