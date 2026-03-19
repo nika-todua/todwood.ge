@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@forward "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&display=swap');
+
+:root{
+    // colors
+    --neutral100: #F2EFEA;
+    --woodBrown: #8B4513;
+
+
+    // sizes
+    --container-max-width: 1290px;
+    
+    // font
+    --font:  "Noto Sans Georgian", sans-serif; //! "Noto Sans Georgian", sans-serif / "Roboto", sans-serif
+}

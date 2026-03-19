@@ -4,9 +4,10 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Header } from './header/header';
+import { Home } from './page/home/home';
 
 @NgModule({
-  declarations: [App, Header],
+  declarations: [App, Header, Home],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],

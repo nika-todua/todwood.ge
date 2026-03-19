@@ -1,1 +1,35 @@
-<p>header works!</p>
+<div class="header w-full h-[80px] bg-[var(--neutral100)] flex items-center justify-center border-b border-[#E5E0D8]">
+    <div class="header_inner h-full w-[90%] flex items-center justify-between max-w-[var(--container-max-width)]">
+
+        <a routerLink="" rel="follow" class="flex items-center justify-center gap-2 header_inner_logo">
+            <div class="w-[40px] h-[40px] rounded-sm bg-[var(--woodBrown)] flex items-center justify-center icon [font-family:var(--font)] text-white font-medium">TW</div>
+            <span class="[font-family:var(--font)] font-semibold text-xl">Todwood</span>
+        </a>
+
+        <nav class="hidden items-center justify-center {{activeClass}} absolute left-0 top-[80px] w-full bg-[var(--neutral100)] md:block md:left-auto md:w-fit md:top-auto md:relative">
+            <ul class="flex items-start justify-center gap-2 w-full flex-col px-[4.5%] py-4 md:flex-row md:items-center md:w-fit md:p-0">
+                <li class="flex w-full md:w-fit md:block"><a routerLink="" rel="follow" class="flex w-full [font-family:var(--font)] font-medium text-base md:w-fit md:block">მთავარი</a></li>
+                <li class="flex w-full md:w-fit md:block"><a routerLink="/project" rel="follow" class="flex w-full [font-family:var(--font)] font-medium text-base md:w-fit md:block">პროექტები</a></li>
+                <li class="flex w-full md:w-fit md:block"><a routerLink="/services" rel="follow" class="flex w-full [font-family:var(--font)] font-medium text-base md:w-fit md:block">სერვისები</a></li>
+                <li class="flex w-full md:w-fit md:block"><a routerLink="contact" rel="follow" class="flex w-full [font-family:var(--font)] font-medium text-base md:w-fit md:block">კონტაქტი</a></li>
+                <li class="flex w-full md:w-fit md:block">
+                    <select name="language" id="lang" class="py-[5px] px-[6px] [font-family:var(--font)] text-base uppercase outline-0 border-solid border border-black rounded-lg">
+                        <option value="ka">KA</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="toggle group cursor-pointer w-[35px] h-[35px] flex flex-col justify-center items-center gap-[10px] md:hidden md:pointer-events-none" [class.active]="isActive" (click)="toggleEvent()">
+            <!-- Line 1 -->
+            <span class="w-[35px] h-1 rounded-sm pointer-events-none transition-transform duration-200 ease-in-out bg-black group-[.active]:rotate-45 group-[.active]:translate-y-[14px]"></span>
+            <!-- Line 2 -->
+            <span class="w-[35px] h-1 rounded-sm bg-black pointer-events-none transition-all duration-200 ease-in-out group-[.active]:opacity-0"></span>
+            <!-- Line 3 -->
+            <span class="w-[35px] h-1 rounded-sm bg-black pointer-events-none transition-transform duration-200 ease-in-out group-[.active]:-rotate-45 group-[.active]:-translate-y-[14px]"></span>
+        </div>
+        
+    </div>
+</div>

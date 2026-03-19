@@ -1,0 +1,9 @@
+.header{
+    &_inner{
+        nav{
+            &.activeToggle{
+                display: flex !important;
+            }
+        }
+    }
+}
