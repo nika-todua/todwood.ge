@@ -1,1 +1,73 @@
-<p>projects works!</p>
+<section class="projects relative w-full pt-[80px] bg-[var(--white)]">
+    
+    <section class="project_top relative my-[64px] flex justify-center items-center">
+        <div class="project_top_inner max-w-[var(--container-max-width)] w-[90%] relative">
+            <h1 class="max-w-[691.188px] [font-family:var(--font)] text-[38px] font-bold text-[var(--textBrown100)]">ჩვენი პროექტები</h1>
+            <p class="mt-4 max-w-[691.188px] [font-family:var(--font)] font-medium text-[var(--textBrown50)]">გაეცანით ჩვენი ხელნაკეთი საუნების პორტფოლიოს, რომელთაგან თითოეული უნიკალურად არის შექმნილი და აგებული, რათა მოლოდინებს გადააჭარბოს.</p>
+        </div>
+    </section>
+
+    <section class="projects_sort relative bg-[var(--neutral100)] py-[32px] flex justify-center items-center border-t border-b border-[#E5E0D8]">
+        <div class="projects_sort_inner max-w-[var(--container-max-width)] w-[90%] relative">
+            <ul class="flex gap-3 flex-wrap">
+                <li class="[font-family:var(--font)] py-[8px] px-[24px] border-[2px] border-[#E5E0D8] rounded-4xl text-[var(--textBrown100)] font-medium">ყველა</li>
+                <li class="[font-family:var(--font)] py-[8px] px-[24px] border-[2px] border-[#E5E0D8] rounded-4xl text-[var(--textBrown100)] font-medium">საცხოვრებელი</li>
+                <li class="[font-family:var(--font)] py-[8px] px-[24px] border-[2px] border-[#E5E0D8] rounded-4xl text-[var(--textBrown100)] font-medium">კომერციული</li>
+                <li class="[font-family:var(--font)] py-[8px] px-[24px] border-[2px] border-[#E5E0D8] rounded-4xl text-[var(--textBrown100)] font-medium">გარე</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- project cards -->
+    <section class="projects_cardsec relative bg-[var(--neutral100)] py-[64px] flex justify-center items-center border-b border-[#E5E0D8]">
+        <div class="projects_cardsec_inner max-w-[var(--container-max-width)] w-[90%] relative">
+            
+
+            <div class="projects_cont relative w-full flex flex-col gap-[32px] justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3">
+                @for (item of projectsArray; track $index) {
+                    <div class="projects_cont-item w-full rounded-lg overflow-hidden relative bg-[var(--white)]">
+                        <div class="img_box w-full h-[320px]">
+                            <img [src]="item.img" [alt]="item.title" loading="lazy" class="w-full h-full object-cover select-none pointer-events-none transition duration-200 ease-in-out hover:brightness-70">
+                        </div>
+                        <div class="card_dec p-[19px] flex flex-col">
+                            <p class="category w-fit h-fit [font-family:var(--font)] py-[4px] px-[12px] bg-[#F3ECE7] rounded-full text-sm text-[var(--textBrown100)] font-semibold">{{item.category}}</p>
+                            <h2 class="card_title [font-family:var(--font)] mt-3 text-[24px] text-[var(--textBrown100)] font-bold">{{item.title}}</h2>
+                            <p class="mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown100)]">{{item.desc}}</p>
+                            <p class="card_location mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown50)] flex justify-start items-center">
+                                <i class="bi bi-geo-alt flex"></i>
+                                {{item.location}}
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="projects_end relative bg-[var(--white)] py-[96px] flex justify-center items-center">
+        <div class="projects_end_inner max-w-[var(--container-max-width)] w-[90%] relative">
+
+            <ul class="flex gap-[32px] flex-wrap justify-between">
+                <li class="flex flex-col text-center mx-auto">
+                    <span class="number text-[48px] [font-family:var(--font)] font-semibold text-[var(--textBrown100)]">200+</span>
+                    <span class="name [font-family:var(--font)] font-medium text-[var(--textBrown50)]">Saunas Built</span>
+                </li>
+                <li class="flex flex-col text-center mx-auto">
+                    <span class="number text-[48px] [font-family:var(--font)] font-semibold text-[var(--textBrown100)]">20+</span>
+                    <span class="name [font-family:var(--font)] font-medium text-[var(--textBrown50)]">Years Experience</span>
+                </li>
+                <li class="flex flex-col text-center mx-auto">
+                    <span class="number text-[48px] [font-family:var(--font)] font-semibold text-[var(--textBrown100)]">98%</span>
+                    <span class="name [font-family:var(--font)] font-medium text-[var(--textBrown50)]">Client Satisfaction</span>
+                </li>
+                <li class="flex flex-col text-center mx-auto">
+                    <span class="number text-[48px] [font-family:var(--font)] font-semibold text-[var(--textBrown100)]">100%</span>
+                    <span class="name [font-family:var(--font)] font-medium text-[var(--textBrown50)]">Custom Designs</span>
+                </li>
+            </ul>
+            
+        </div>
+    </section>
+
+</section>
