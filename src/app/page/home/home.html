@@ -1,27 +1,96 @@
-<div class="home relative w-full">
+<div class="relative w-full home">
 
-    <div class="home_hero w-full h-[670px] bg-red-500 flex justify-center items-center">
+    <section class="home_hero relative w-full h-[670px] flex justify-center overflow-hidden items-center sm:h-[750px] md:h-[800px] lg:h-[870px]">
         <div class="img_cont absolute w-full h-full z-[1]">
             <img src="https://images.unsplash.com/photo-1724301930658-2f21ae702d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBzYXVuYSUyMGludGVyaW9yJTIwY2VkYXIlMjB3b29kfGVufDF8fHx8MTc3Mzg1NDA3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Home hero image" class="h-full w-full object-cover brightness-60 ">
+            alt="Home hero image" loading="eager" fetchpriority="high" class="object-cover w-full h-full brightness-50 pointer-events-none select-none">
         </div>
             
-        <div class="home_hero-text_cont w-[90%] z-3 relative flex flex-col gap-2">
-            <h1 class="[font-family:var(--font)] text-white text-[32px] font-bold">ხელნაკეთი საუნები, რომლებიც თაობებისთვისაა შექმნილი</h1>
-            <p class="[font-family:var(--font)] text-white text-base font-normal">პრემიუმ კლასის კედრის საუნა, რომელიც აერთიანებს ტრადიციულ ფინურ ტექნიკას თანამედროვე დიზაინთან.</p>
-            <div class="btn_cont flex flex-wrap items-center justify-center gap-2.5">
-                <button class="[font-family:var(--font)] max-w-[250px] w-full h-[48px] bg-[var(--woodBrown)] rounded-lg">
-                    <a routerLink="projects" rel="follow" class="w-full h-full flex items-center justify-center text-white font-medium">ჩვენი ნამუშევრები</a>
+        <div class="home_hero-text_cont w-[90%] z-3 relative flex flex-col gap-2 max-w-[780px] md:gap-3">
+            <h1 class="[font-family:var(--font)] text-white text-[30px] font-bold md:text-[40px] lg:text-[46px]">ხელნაკეთი საუნები, რომლებიც თაობებისთვისაა შექმნილი</h1>
+            <p class="[font-family:var(--font)] text-white text-base font-normal md:text-lg lg:text-xl">პრემიუმ კლასის კედრის საუნა, რომელიც აერთიანებს ტრადიციულ ფინურ ტექნიკას თანამედროვე დიზაინთან.</p>
+            <div class="btn_cont flex flex-wrap items-center justify-center gap-2.5 md:justify-start">
+                <button class="[font-family:var(--font)] max-w-[250px] w-full h-[50px] text-base bg-[var(--woodBrown)] rounded-lg md:h-[56px] lg:text-lg">
+                    <a routerLink="/projects" rel="follow" class="flex items-center justify-center w-full h-full font-medium text-white">ჩვენი ნამუშევრები</a>
                 </button>
-                <button class="[font-family:var(--font)] max-w-[250px] w-full h-[48px] bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg">
-                    <a routerLink="projects" rel="follow" class="w-full h-full flex items-center justify-center text-white font-medium">კონტაქტი</a>
+                <button class="[font-family:var(--font)] max-w-[250px] w-full h-[50px] text-base bg-white/20 backdrop-blur-sm border border-white/20 rounded-lg md:h-[56px] lg:text-lg">
+                    <a routerLink="/contact" rel="follow" class="flex items-center justify-center w-full h-full font-medium text-white">კონტაქტი</a>
                 </button>
             </div>
         </div>
         
-    </div>
+    </section>
+
+    <section class="home_craft_section relative bg-[var(--white)] flex justify-center items-center py-[96px]">
+        <div class="home_craft_section_inner max-w-[var(--container-max-width)] w-[90%] h-full relative flex flex-col justify-start items-center">
+            
+            <div class="w-full text-center home_craft_section_inner-text_sec max-w-[691.188px]">
+                <h2 class="[font-family:var(--font)] text-[32px] font-bold md:text-[38px]">რატომ უნდა აირჩიოთ Todwood?</h2>
+                <p class="[font-family:var(--font)] text-lg font-normal">განიცადეთ ხელოვნების, ხარისხისა და კეთილდღეობის იდეალური ნაზავი ჩვენს მიერ აგებულ ყველა საუნაში</p>
+            </div>
+
+            <div class="flex flex-wrap w-full h-auto gap-4 mt-7 home_craft_section_inner-card_cont lg:flex-nowrap">
+                
+                <div class="w-full home_craft_section_inner-card_cont-item flex flex-col gap-3 p-[32px] bg-[var(--neutral100)] border border-[#96643f] rounded-lg lg:max-w-[419.33px]">
+                    <div class="icon w-[48px] h-[48px] flex items-center rounded-lg justify-center bg-[#e8dacc]"> <i class="text-[22px] flex text-[var(--woodBrown)] bi bi-award"></i> </div>
+                    <h3 class="[font-family:var(--font)] font-semibold text-[20px] text-[var(--textBrown100)]">პრემიუმ ხელოსნობა</h3>
+                    <p class="[font-family:var(--font)] text-base font-normal text-[var(--textBrown50)]">20 წელზე მეტი გამოცდილება ტრადიციული და თანამედროვე საუნების მშენებლობაში</p>
+                </div>
+
+                <div class="w-full home_craft_section_inner-card_cont-item flex flex-col gap-3 p-[32px] bg-[var(--neutral100)] border border-[#96643f] rounded-lg lg:max-w-[419.33px]">
+                    <div class="icon w-[48px] h-[48px] flex items-center rounded-lg justify-center bg-[#e8dacc]"> <i class="text-[22px] flex text-[var(--woodBrown)] bi bi-people"></i> </div>
+                    <h3 class="[font-family:var(--font)] font-semibold text-[20px] text-[var(--textBrown100)]">პერსონალიზებული დიზაინი</h3>
+                    <p class="[font-family:var(--font)] text-base font-normal text-[var(--textBrown50)]">თქვენი სივრცის, სტილისა და ველნეს მიზნების შესაბამისად მორგებული, ინდივიდუალურად აშენებული საუნები</p>
+                </div>
+
+                <div class="w-full home_craft_section_inner-card_cont-item flex flex-col gap-3 p-[32px] bg-[var(--neutral100)] border border-[#96643f] rounded-lg lg:max-w-[419.33px]">
+                    <div class="icon w-[48px] h-[48px] flex items-center rounded-lg justify-center bg-[#e8dacc]"> <i class="text-[22px] flex text-[var(--woodBrown)] bi bi-hammer"></i> </div>
+                    <h3 class="[font-family:var(--font)] font-semibold text-[20px] text-[var(--textBrown100)]">ექსპერტის ინსტალაცია</h3>
+                    <p class="[font-family:var(--font)] text-base font-normal text-[var(--textBrown50)]">პროფესიონალური მონტაჟი პრემიუმ ხარისხის კედრისა და მასალებისგან</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="home_about relative bg-[var(--neutral100)] flex justify-center items-center py-[96px]">
+        <div class="home_about_inner max-w-[var(--container-max-width)] w-[90%] h-full relative flex gap-9 flex-col justify-start items-center">
+            <!-- top about -->
+            <aside class="top_sec relative w-full h-fit lg:flex lg:gap-5 lg:items-center lg:justify-between">
+                <div class="text_sec w-full lg:w-[50%]">
+                    <h2 class="[font-family:var(--font)] text-[32px] font-semibold text-[var(--textBrown100)]">ტრადიციული ფინური სრულყოფილება</h2>
+                    <p class="[font-family:var(--font)] mt-3 font-medium text-xl text-[var(--textBrown50)]">ჩვენს მიერ აშენებული ყველა საუნა საუკუნოვანი ფინური ტრადიციების დასტურია, რომელიც ხელით შერჩეული კედრისა და დროში გამოცდილი მშენებლობის მეთოდების გამოყენებით უზრუნველყოფს გამძლეობას და საუნის ავთენტურ გამოცდილებას.</p>
+                    <p class="[font-family:var(--font)] mt-5 font-medium text-lg text-[var(--textBrown50)]">ინტიმური სახლის საუნებიდან დაწყებული ფართომასშტაბიანი კომერციული დანადგარებით დამთავრებული, ჩვენ ყველა პროექტს ვნებასა და სიზუსტეს ვანიჭებთ.</p>
+                </div>
+                <div class="img_sec mt-8 relative aspect-square w-full rounded-lg overflow-hidden max-h-[500px] lg:w-[50%] lg:m-0">
+                    <img src="https://images.unsplash.com/photo-1741601274064-b0b23cfb332d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGZpbm5pc2glMjBzYXVuYSUyMHN0ZWFtfGVufDF8fHx8MTc3Mzg1NDA3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="top about image" loading="lazy" fetchpriority="high" class="pointer-events-none select-none object-cover aspect-square w-full h-full">
+                </div>
+            </aside>
+
+            <!-- bottom about -->
+            <aside class="top_sec relative w-full h-fit lg:flex lg:gap-5 lg:flex-row-reverse lg:items-center lg:justify-between">
+                <div class="text_sec w-full lg:w-[50%]">
+                    <h2 class="[font-family:var(--font)] text-[32px] font-semibold text-[var(--textBrown100)]">თანამედროვე დიზაინი ხვდება მარადიულ ხელოსნობას</h2>
+                    <p class="[font-family:var(--font)] mt-3 font-medium text-xl text-[var(--textBrown50)]">ჩვენი თანამედროვე საუნის დიზაინი შეუფერხებლად ერწყმის თანამედროვე არქიტექტურას და ამავდროულად ინარჩუნებს ტრადიციული საუნის კულტურის სულს.</p>
+                    <p class="[font-family:var(--font)] mt-5 font-medium text-lg text-[var(--textBrown50)]">თითოეული პროექტი გააზრებულად არის შექმნილი თქვენი ცხოვრების სტილის შესავსებად და თქვენი კეთილდღეობის მოგზაურობის გასაუმჯობესებლად.</p>
+                </div>
+                <div class="img_sec mt-8 relative aspect-square w-full rounded-lg overflow-hidden max-h-[500px] lg:w-[50%] lg:m-0">
+                    <img src="https://images.unsplash.com/photo-1757940556610-a114be4733bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzYXVuYSUyMGRlc2lnbiUyMGJlbmNofGVufDF8fHx8MTc3Mzg1NDA3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="top about image" loading="lazy" fetchpriority="high" class="pointer-events-none select-none object-cover aspect-square w-full h-full">
+                </div>
+            </aside>
+            
+        </div>
+    </section>
     
-
-
-
+    <section class="home_endSec relative bg-[var(--woodBrown)] flex justify-center items-center py-[96px]">
+        <div class="home_endSec_inner max-w-[var(--container-max-width)] w-[90%] h-full relative flex flex-col justify-start items-center">
+            <h2 class="[font-family:var(--font)] text-[32px] font-bold md:text-[38px] text-center text-[var(--white)]">მზად ხართ თქვენი ოცნების საუნის ასაშენებლად?</h2>
+            <p class="mt-4 [font-family:var(--font)] text-lg font-normal text-center text-[var(--neutral100)] max-w-[876.594px]">მოდით განვიხილოთ თქვენი ხედვა და შევქმნათ ინდივიდუალური საუნა, რომელიც შეცვლის თქვენს ველნეს რუტინას</p>
+            <button class="mt-4  bg-[var(--neutral100)] rounded-lg"><a routerLink="/contact" rel="follow"
+                class="flex px-4 py-5 [font-family:var(--font)] font-semibold">დაიწყეთ თქვენი პროექტი</a></button>
+        </div>
+    </section>
+    
 </div>
