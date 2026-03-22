@@ -1,7 +1,18 @@
 [build]
-  publish = "dist/nikatodua-com/browser"  # or "build" folder
   command = "npm run build"
+  publish = "dist/todwood-ge/browser"
 
+[build.environment]
+  NODE_VERSION = "20"
+
+# 1. მხოლოდ JSON ფაილებზე წვდომის აკრძალვა (რომ საჯაროდ არავინ წაიკითხოს)
+[[redirects]]
+  from = "/assets/jsons/*"
+  to = "/"
+  status = 301
+  force = true 
+
+# 2. Angular-ის სტანდარტული როუტინგი (SPA-სთვის აუცილებელი)
 [[redirects]]
   from = "/*"
   to = "/index.html"

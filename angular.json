@@ -34,7 +34,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/_redirects"
             ],
             "styles": [
               "node_modules/bootstrap-icons/font/bootstrap-icons.scss",
@@ -54,8 +55,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "400kb",
+                  "maximumError": "600kb"
                 },
                 {
                   "type": "anyComponentStyle",
