@@ -6,9 +6,10 @@ import { App } from './app';
 import { Header } from './header/header';
 import { Home } from './page/home/home';
 import { Projects } from './page/projects/projects';
+import { Services } from './page/services/services';
 
 @NgModule({
-  declarations: [App, Header, Home, Projects],
+  declarations: [App, Header, Home, Projects, Services],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],

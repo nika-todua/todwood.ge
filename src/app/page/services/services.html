@@ -1,0 +1,126 @@
+<section class="services relative w-full pt-[80px] bg-[var(--white)]">
+
+    <section class="project_top relative my-[64px] flex justify-center items-center">
+        <div class="project_top_inner max-w-[var(--container-max-width)] w-[90%] relative">
+            <h1 class="max-w-[691.188px] [font-family:var(--font)] text-[38px] font-bold text-[var(--textBrown100)]">ჩვენი სერვისები</h1>
+            <p class="mt-4 max-w-[691.188px] [font-family:var(--font)] font-medium text-[var(--textBrown50)]">საწყისი დიზაინიდან საბოლოო მონტაჟამდე, ჩვენ გთავაზობთ საუნის მშენებლობის ყოვლისმომცველ მომსახურებას უკომპრომისო ხარისხით.</p>
+        </div>
+    </section>
+
+    <section class="services_cont relative flex justify-center items-center py-[64px] bg-[var(--neutral100)] border-t border-[#E5E0D8]">
+        <div class="services_cont_inner max-w-[var(--container-max-width)] w-[90%] relative">
+            <div class="card_cont w-full relative flex gap-3 flex-wrap md:grid md:grid-cols-2 lg:grid-cols-3">
+                @for (item of cardArray; track $index) {
+                    <div class="cont_cont-item w-full p-[28px] bg-[var(--white)] rounded-lg  border border-[#96643f]">
+                        <h2 class="card_title [font-family:var(--font)] text-[26px] font-semibold text-[var(--textBrown100)]">{{item.title}}</h2>
+                        <p class="text_text mt-3 [font-family:var(--font)] text-sm text-[var(--textBrown50)]">{{item.dec}}</p>
+                        <ul class="mt-3 flex flex-col gap-2">
+                            @for (itemarray of item.list; track $index) {
+                                <li class="[font-family:var(--font)] text-base text-[var(--textBrown50)] flex items-start">
+                                    <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i><span class="ml-1">{{itemarray}}</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="process relative w-full flex justify-center items-center py-[96px] bg-[var(--white)]">
+        <div class="process_inner max-w-[var(--container-max-width)] w-[90%] relative flex justify-start items-center flex-col">
+            <div class="w-full text-center home_craft_section_inner-text_sec max-w-[691.188px]">
+                <h2 class="[font-family:var(--font)] text-[32px] font-bold text-[var(--textBrown100)] md:text-[38px]">ჩვენი მშენებლობის პროცესი</h2>
+                <p class="[font-family:var(--font)] text-lg font-medium text-[var(--textBrown50)]">გამჭვირვალე, თანამშრომლობითი მიდგომა, რომელიც უზრუნველყოფს, რომ თქვენი საუნა მოლოდინს გადააჭარბებს</p>
+            </div>
+            <div class="process_cont mt-9 relative w-full flex flex-wrap lg:flex-nowrap lg:items-center lg:justify-between">
+
+                <div class="left_box relative lg:w-[40%]">
+                    <ul class="flex flex-col gap-7">
+                        @for (item of processArray; track $index; let i = $index) {
+                            <li class="flex gap-3">
+                                <span class="number [font-family:var(--font)] w-[53px] h-[53px] aspect-square rounded-full flex bg-[#F3ECE7] justify-center items-center text-xl font-medium text-[var(--woodBrown)]">
+                                    0{{i+1}}
+                                </span>
+                                <div class="textbox">
+                                    <h2 class="[font-family:var(--font)] text-2xl font-bold text-[var(--textBrown100)]">{{item.title}}</h2>
+                                    <p class="mt-2 [font-family:var(--font)] text-base text-[var(--textBrown50)]">{{item.desc}}</p>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="right_boc relative mt-9 w-full lg:w-[50%]">
+                    <div class="relative w-full h-[500px] rounded-xl overflow-hidden lg:h-[700px]">
+                        <!-- Main Image -->
+                        <img src="https://images.unsplash.com/photo-1770625467632-b44d039a71ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYXVuYSUyMGNvbnN0cnVjdGlvbiUyMHdvb2QlMjBwYW5lbHN8ZW58MXx8fHwxNzczODU0MDc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                        alt="Main" loading="lazy" class="w-full h-full object-cover pointer-events-none select-none">
+                        <!-- Small Overlay Image -->
+                        <div class="absolute bottom-2 right-2 border-4 border-white rounded-lg overflow-hidden shadow-md">
+                            <img src="https://images.unsplash.com/photo-1772669179338-86db9d24d08f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjZWRhciUyMHdvb2QlMjB0ZXh0dXJlJTIwbmF0dXJhbHxlbnwxfHx8fDE3NzM4NTQwNzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+                            alt="Small" loading="lazy" class="w-40 h-40 object-cover pointer-events-none select-none lg:w-50 lg:h-50">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="premium relative flex justify-center items-center py-[64px] bg-[var(--neutral100)]">
+        <div class="premium_inner max-w-[var(--container-max-width)] w-[90%] relative">
+
+            <div class="cont relative flex flex-col gap-4 w-full lg:flex-row lg:gap-6">
+
+                <div class="left_cont relative w-full h-[500px] rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1763392199096-6efd9d28d8cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b29kJTIwZ3JhaW4lMjBwYXR0ZXJuJTIwYnJvd258ZW58MXx8fHwxNzczODU0MDc3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    alt="Premium image" loading="lazy" class="w-full h-full object-cover pointer-events-none select-none">
+                </div>
+                <div class="right_cont relative w-full">
+                    <h2 class="[font-family:var(--font)] text-[36px] font-bold text-[var(--textBrown100)]">პრემიუმ მასალები</h2>
+                    <p class="[font-family:var(--font)] mt-2 text-lg">ჩვენ ვიყენებთ ექსკლუზიურად ხელით შერჩეულ დასავლურ წითელ კედარს და სკანდინავიურ ნაძვს, რომლებიც შერჩეულია მათი უმაღლესი სითბოსადმი მდგრადობის, არომატული თვისებებისა და ბუნებრივი სილამაზის გამო.</p>
+
+                    <ul class="flex flex-col gap-3 mt-4">
+                        <li class="[font-family:var(--font)] text-base font-medium flex gap-2">
+                            <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i>
+                            <span>მდგრადი წყაროებიდან მოპოვებული ხე-ტყე</span>
+                        </li>
+                        <li class="[font-family:var(--font)] text-base font-medium flex gap-2">
+                            <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i>
+                            <span>გამჭვირვალე, კვანძებისგან თავისუფალი არჩევანი</span>
+                        </li>
+                        <li class="[font-family:var(--font)] text-base font-medium flex gap-2">
+                            <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i>
+                            <span>ბუნებრივი ანტიმიკრობული თვისებები</span>
+                        </li>
+                        <li class="[font-family:var(--font)] text-base font-medium flex gap-2">
+                            <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i>
+                            <span>განსაკუთრებული განზომილებიანი სტაბილურობა</span>
+                        </li>
+                        <li class="[font-family:var(--font)] text-base font-medium flex gap-2">
+                            <i class="text-base text-[var(--woodBrown)] mt-1 flex bi bi-check-lg"></i>
+                            <span>ლამაზი მარცვლოვანი ნიმუშები</span>
+                        </li>
+                    </ul>
+
+                    <button class="mt-6 bg-[var(--woodBrown)] [font-family:var(--font)] text-base text-[var(--white)] rounded-lg"><a routerLink="/contact" rel="follow" class="py-4 px-5 flex">
+                        <span>მასალის ნიმუშების მოთხოვნა</span> <i class="bi bi-arrow-right-short text-lg"></i></a></button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="beautiful relative flex justify-center items-center py-[96px] bg-[#64748B]">
+        <div class="beautiful_inner max-w-[var(--container-max-width)] w-[90%] relative flex justify-center items-center flex-col">
+            <h2 class="[font-family:var(--font)] text-[32px] font-bold md:text-[38px] text-center text-[var(--white)]">მოდით, რაღაც ლამაზი ავაშენოთ</h2>
+            <p class="mt-4 [font-family:var(--font)] text-lg font-normal text-center text-[var(--neutral100)] max-w-[876.594px]">დაგეგმეთ კონსულტაცია თქვენი საუნის პროექტის განსახილველად</p>
+            <button class="mt-4 bg-[var(--neutral100)] rounded-lg">
+                <a routerLink="/contact" rel="follow" class="flex px-4 py-5 [font-family:var(--font)] font-semibold text-[var(--textBrown100)]">კონსულტაციის დაგეგმვა</a>
+            </button>
+        </div>
+    </section>
+    
+</section>

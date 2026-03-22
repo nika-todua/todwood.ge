@@ -22,9 +22,6 @@ export class Header {
     }else{
       this.activeClass = 'activeToggle'
     }
-    
-    console.log( this.activeClass );
-    
   }
   
 }
