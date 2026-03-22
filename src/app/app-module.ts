@@ -7,9 +7,10 @@ import { Header } from './header/header';
 import { Home } from './page/home/home';
 import { Projects } from './page/projects/projects';
 import { Services } from './page/services/services';
+import { Contact } from './page/contact/contact';
 
 @NgModule({
-  declarations: [App, Header, Home, Projects, Services],
+  declarations: [App, Header, Home, Projects, Services, Contact],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],
