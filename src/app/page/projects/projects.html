@@ -21,24 +21,10 @@
     <!-- project cards -->
     <section class="projects_cardsec relative bg-[var(--neutral100)] py-[64px] flex justify-center items-center border-b border-[#E5E0D8]">
         <div class="projects_cardsec_inner max-w-[var(--container-max-width)] w-[90%] relative">
-            
 
             <div class="projects_cont relative w-full flex flex-col gap-[32px] justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3">
                 @for (item of projectsArray; track $index) {
-                    <div class="projects_cont-item w-full rounded-lg overflow-hidden relative bg-[var(--white)]">
-                        <div class="img_box w-full h-[320px]">
-                            <img [src]="item.img" [alt]="item.title" loading="lazy" class="w-full h-full object-cover select-none pointer-events-none transition duration-200 ease-in-out hover:brightness-70">
-                        </div>
-                        <div class="card_dec p-[19px] flex flex-col">
-                            <p class="category w-fit h-fit [font-family:var(--font)] py-[4px] px-[12px] bg-[#F3ECE7] rounded-full text-sm text-[var(--textBrown100)] font-semibold">{{item.category}}</p>
-                            <h2 class="card_title [font-family:var(--font)] mt-3 text-[24px] text-[var(--textBrown100)] font-bold">{{item.title}}</h2>
-                            <p class="mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown100)]">{{item.desc}}</p>
-                            <p class="card_location mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown50)] flex justify-start items-center">
-                                <i class="bi bi-geo-alt flex"></i>
-                                {{item.location}}
-                            </p>
-                        </div>
-                    </div>
+                    <app-projectcard  [cardinfo]="item"></app-projectcard>
                 }
             </div>
             

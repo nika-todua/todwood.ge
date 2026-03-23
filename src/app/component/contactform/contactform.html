@@ -1,0 +1,62 @@
+<div class="contForm w-full relative mt-4 flex flex-col gap-3">
+    <!-- full name input -->
+    <div class="input_cont flex gap-2 flex-col">
+        <label for="full_name" class="[font-family:var(--font)] font-bold text-sm">სახელი, გვარი *</label>
+        <input type="text" name="full_name" id="full_name" placeholder="John Smith"
+        class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+            [font-family:var(--font)] font-medium text-sm">
+    </div>
+    <div class="inputGroup flex gap-3 flex-col md:flex-row">
+        <!-- email input -->
+        <div class="input_cont flex gap-2 flex-col w-full">
+            <label for="Email" class="[font-family:var(--font)] font-bold text-sm">მეილი *</label>
+            <input type="email" name="Email" id="Email" placeholder="john@example.com"
+            class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+                [font-family:var(--font)] font-medium text-sm">
+        </div>
+        <!-- phone input -->
+        <div class="input_cont flex gap-2 flex-col w-full">
+            <label for="Phone_Number" class="[font-family:var(--font)] font-bold text-sm">ტელეფოლის ნომერი *</label>
+            <input type="tel" name="Phone_Number" id="Phone_Number" placeholder="599 XX XX XX"
+            class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+                [font-family:var(--font)] font-medium text-sm">
+        </div>
+    </div>
+    <div class="inputGroup flex gap-3 flex-col md:flex-row">
+        <!-- Project Type input -->
+        <div class="input_cont flex gap-2 flex-col w-full">
+            <label for="Project_Type" class="[font-family:var(--font)] font-bold text-sm">პროექტის ტიპი *</label>
+            <select name="Project_Type" id="Project_Type" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+            [font-family:var(--font)] font-medium text-sm">
+                <option class="[font-family:var(--font)] font-medium text-sm" value="" disabled selected>აირჩიეთ ტიპი</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - დახურული</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - გარე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">კომერციული</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">აღდგენა/განახლება</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">მხოლოდ კონსულტაცია</option>
+            </select>
+        </div>
+        <!-- Project Timeline input -->
+        <div class="input_cont flex gap-2 flex-col w-full">
+            <label for="Project_Timeline" class="[font-family:var(--font)] font-bold text-sm">პროექტის ვადები</label>
+            <select name="Project_Timeline" id="Project_Timeline" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+            [font-family:var(--font)] font-medium text-sm">
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">აირჩიეთ ვადები</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">რაც შეიძლება მალე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">1-3 თვე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">3-6 თვე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">6-12 თვე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="">უბრალოდ ვგეგმავ</option>
+            </select>
+        </div>
+    </div>
+    <!-- Project Details input -->
+    <div class="input_cont flex gap-2 flex-col w-full">
+        <label for="Project_Details" class="[font-family:var(--font)] font-bold text-sm">პროექტის დეტალები *</label>
+        <textarea name="Project_Details" id="Project_Details" placeholder="Tell us about your project, space dimensions, design preferences, and any specific requirements..."
+        class="w-full h-[140px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg p-2 [font-family:var(--font)] font-medium text-sm resize-none"></textarea>
+    </div>
+
+    <button class="send_message_form w-full h-[56px] rounded-lg bg-[var(--woodBrown)] [font-family:var(--font)] font-medium text-sm text-[var(--neutral100)] text-lg cursor-pointer"
+            (click)="sendmessage()">Send Inquiry</button>
+</div>

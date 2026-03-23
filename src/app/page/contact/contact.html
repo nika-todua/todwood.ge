@@ -9,75 +9,10 @@
 
     <section class="contact_formSec relative w-full flex justify-center items-center py-[64px] bg-[var(--neutral100)] border-t border-[#E5E0D8]">
         
-        <div class="contact_formSec_inner relative w-[90%] max-w-[var(--container-max-width)] flex gap-4 flex-col lg:flex-row lg:gap-9">
+        <div class="contact_formSec_inner relative w-[90%] max-w-[var(--container-max-width)] flex gap-4 flex-col items-start lg:flex-row lg:gap-9">
             <aside class="formCont relative w-full">
                 <h2 class="[font-family:var(--font)] text-[30px] font-semibold">გამოგვიგზავნეთ შეტყობინება</h2>
-
-                <div class="contForm w-full relative mt-4 flex flex-col gap-3">
-                    <!-- full name input -->
-                    <div class="input_cont flex gap-2 flex-col">
-                        <label for="full_name" class="[font-family:var(--font)] font-bold text-sm">სახელი, გვარი *</label>
-                        <input type="text" name="full_name" id="full_name" placeholder="John Smith"
-                        class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-                            [font-family:var(--font)] font-medium text-sm">
-                    </div>
-                    <div class="inputGroup flex gap-3 flex-col md:flex-row">
-                        <!-- email input -->
-                        <div class="input_cont flex gap-2 flex-col w-full">
-                            <label for="Email" class="[font-family:var(--font)] font-bold text-sm">მეილი *</label>
-                            <input type="email" name="Email" id="Email" placeholder="john@example.com"
-                            class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-                                [font-family:var(--font)] font-medium text-sm">
-                        </div>
-                        <!-- phone input -->
-                        <div class="input_cont flex gap-2 flex-col w-full">
-                            <label for="Phone_Number" class="[font-family:var(--font)] font-bold text-sm">ტელეფოლის ნომერი *</label>
-                            <input type="tel" name="Phone_Number" id="Phone_Number" placeholder="599 XX XX XX"
-                            class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-                                [font-family:var(--font)] font-medium text-sm">
-                        </div>
-                    </div>
-                    <div class="inputGroup flex gap-3 flex-col md:flex-row">
-                        <!-- Project Type input -->
-                        <div class="input_cont flex gap-2 flex-col w-full">
-                             <label for="Project_Type" class="[font-family:var(--font)] font-bold text-sm">პროექტის ტიპი *</label>
-                            <select name="Project_Type" id="Project_Type" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-                            [font-family:var(--font)] font-medium text-sm">
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="" disabled selected>აირჩიეთ ტიპი</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - დახურული</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - გარე</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">კომერციული</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">აღდგენა/განახლება</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">მხოლოდ კონსულტაცია</option>
-                            </select>
-                        </div>
-
-                        <!-- Project Timeline input -->
-                        <div class="input_cont flex gap-2 flex-col w-full">
-                            <label for="Project_Timeline" class="[font-family:var(--font)] font-bold text-sm">პროექტის ვადები</label>
-                            <select name="Project_Timeline" id="Project_Timeline" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-                            [font-family:var(--font)] font-medium text-sm">
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">აირჩიეთ ვადები</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">რაც შეიძლება მალე</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">1-3 თვე</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">3-6 თვე</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">6-12 თვე</option>
-                                <option class="[font-family:var(--font)] font-medium text-sm" value="">უბრალოდ ვგეგმავ</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- Project Details input -->
-                    <div class="input_cont flex gap-2 flex-col w-full">
-                        <label for="Project_Details" class="[font-family:var(--font)] font-bold text-sm">პროექტის დეტალები *</label>
-                        <textarea name="Project_Details" id="Project_Details" placeholder="Tell us about your project, space dimensions, design preferences, and any specific requirements..."
-                        class="w-full h-[140px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg p-2 [font-family:var(--font)] font-medium text-sm resize-none"></textarea>
-                    </div>
-
-                    <button class="send_message_form w-full h-[56px] rounded-lg bg-[var(--woodBrown)]
-                    [font-family:var(--font)] font-medium text-sm text-[var(--neutral100)] text-lg cursor-pointer" (click)="sendmessage()">Send Inquiry</button>
-                    
-                </div>
-                
+                <app-contactform></app-contactform>
             </aside>
 
             <aside class="contact_info relative w-full">
@@ -115,7 +50,7 @@
 
                 <div class="img_box mt-5 rounded-lg overflow-hidden relative w-full h-[400px]">
                     <img src="https://images.unsplash.com/photo-1713270232675-db07a2074028?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYXVuYSUyMHJvY2tzJTIwaG90JTIwc3RvbmVzfGVufDF8fHx8MTc3Mzg1NDA3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    loading="lazy" alt="contact image"
+                    loading="eager" fetchpriority="high" alt="contact image"
                     class="w-full h-full object-cover select-none pointer-events-none">
                 </div>
                 
