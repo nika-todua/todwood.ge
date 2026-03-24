@@ -1,14 +1,16 @@
 <div class="projects_cont-item w-full rounded-lg overflow-hidden relative bg-[var(--white)]">
-    <div class="img_box w-full h-[320px]">
-        <img [src]="cardinfo.img" [alt]="cardinfo.title" loading="lazy" fetchpriority="high" class="w-full h-full object-cover select-none pointer-events-none transition duration-200 ease-in-out hover:brightness-70">
+    <div class="img_box relative w-full h-[320px]">
+        <img [src]="cardinfo.img" [alt]="cardinfo.title" loading="lazy" fetchpriority="high"
+        class="w-full h-full flex object-cover select-none pointer-events-none transition duration-200 ease-in-out hover:brightness-70">
     </div>
-    <div class="card_dec p-[19px] flex flex-col">
-        <p class="category w-fit h-fit [font-family:var(--font)] py-[4px] px-[12px] bg-[#F3ECE7] rounded-full text-sm text-[var(--textBrown100)] font-semibold">{{cardinfo.category}}</p>
+    <div class="card_dec p-[18px] flex flex-col">
+        <span class="category w-fit h-fit [font-family:var(--font)] py-[4px] px-[12px] bg-[#F3ECE7] rounded-full text-sm text-[var(--textBrown100)] font-semibold">
+            {{cardinfo.category}}
+        </span>
         <h2 class="card_title [font-family:var(--font)] mt-3 text-[24px] text-[var(--textBrown100)] font-bold">{{cardinfo.title}}</h2>
-        <p class="mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown50)]">{{cardinfo.desc}}</p>
-        <p class="card_location mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown100)] flex justify-start items-center">
-            <i class="bi bi-geo-alt flex"></i>
-            {{cardinfo.location}}
+        <h3 class="mt-2 [font-family:var(--font)] text-base font-normal text-[var(--textBrown50)]">{{cardinfo.desc}}</h3>
+        <p class="card_location mt-2 [font-family:var(--font)] text-base font-medium text-[var(--textBrown50)] flex justify-start items-center gap-1">
+            <i class="bi bi-geo-alt mt-[1px] flex"></i>{{cardinfo.location}}
         </p>
     </div>
 </div>

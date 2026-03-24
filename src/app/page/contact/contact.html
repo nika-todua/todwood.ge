@@ -24,8 +24,8 @@
                             <i class="bi bi-telephone text-xl flex text-[var(--woodBrown)]"></i>
                         </div>
                         <div class="textcont">
-                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)]">ტელეფონი</p>
-                            <a href="tel:" rel="nofollow" class="link [font-family:var(--font)] text-[var(--textBrown100)]">+(995) 123-4567</a>
+                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)] font-medium">ტელეფონი</p>
+                            <a href="tel:" rel="nofollow" class="link [font-family:var(--font)] text-[var(--textBrown100)] font-semibold">+(995) 123-4567</a>
                         </div>
                     </li>
                     <li class="flex gap-2">
@@ -33,8 +33,8 @@
                             <i class="bi bi-envelope text-xl flex text-[var(--woodBrown)]"></i>
                         </div>
                         <div class="textcont">
-                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)]">ელ. ფოსტა</p>
-                            <a href="mailto:email@example.com" rel="nofollow" class="link [font-family:var(--font)] text-[var(--textBrown100)]">email@example.com</a>
+                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)] font-medium">ელ. ფოსტა</p>
+                            <a href="mailto:email@example.com" rel="nofollow" class="link [font-family:var(--font)] text-[var(--textBrown100)] font-semibold">email@example.com</a>
                         </div>
                     </li>
                     <li class="flex gap-2">
@@ -42,8 +42,8 @@
                             <i class="bi bi-envelope text-xl flex text-[var(--woodBrown)]"></i>
                         </div>
                         <div class="textcont">
-                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)]">მდებარეობა</p>
-                            <p class="link [font-family:var(--font)] text-[var(--textBrown100)]">საქართველო, თბილისი</p>
+                            <p class="name [font-family:var(--font)] text-sm text-[var(--textBrown50)] font-medium">მდებარეობა</p>
+                            <p class="link [font-family:var(--font)] text-[var(--textBrown100)] font-semibold">საქართველო, თბილისი</p>
                         </div>
                     </li>
                 </ul>
@@ -66,8 +66,8 @@
             <div class="faq_cardCont w-full relative mt-10 flex flex-col gap-4">
                 @for (item of faqArray; track $index) {
                     <div class="faq_cardCont-item p-[24px] bg-[#faf7f2] border border-[#96643f] rounded-lg">
-                        <h2 class="[font-family:var(--font)] text-xl font-semibold text-[var(--textBrown100)]">{{item.title}}</h2>
-                        <p class="mt-2 [font-family:var(--font)] text-base text-[var(--textBrown50)]">{{item.desc}}</p>
+                        <h2 class="[font-family:var(--font)] text-xl text-[var(--textBrown100)] font-bold">{{item.title}}</h2>
+                        <p class="mt-2 [font-family:var(--font)] text-base text-[var(--textBrown50)] font-medium">{{item.desc}}</p>
                     </div>
                 }
             </div>
