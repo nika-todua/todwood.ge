@@ -31,8 +31,9 @@ export class Contactform {
 
 
   sendmessage(){
-    // alert("მალე დაემატება")
+    alert("მალე დაემატება")
     
+    return
     // ცვლადები და trim-ები text/textarea ველებისთვის
     const fullname = this.ContactFormCont.Full_name?.trim() || '';
     const email = this.ContactFormCont.Email?.trim() || '';
