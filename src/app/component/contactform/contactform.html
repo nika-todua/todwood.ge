@@ -2,45 +2,65 @@
     <!-- full name input -->
     <div class="input_cont flex gap-2 flex-col">
         <label for="full_name" class="[font-family:var(--font)] font-bold text-sm">სახელი, გვარი *</label>
-        <input type="text" name="full_name" id="full_name" placeholder="John Smith"
+        <input type="text" name="full_name" id="full_name" placeholder="John Smith" [(ngModel)]="ContactFormCont.Full_name"
         class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
             [font-family:var(--font)] font-medium text-sm">
+        @if (ContactFormErrors.Fullname !== '') {
+            <p class="[font-family:var(--font)] font-bold text-sm text-red-800">
+                {{ContactFormErrors.Fullname}}
+            </p>
+        }
     </div>
     <div class="inputGroup flex gap-3 flex-col md:flex-row">
         <!-- email input -->
         <div class="input_cont flex gap-2 flex-col w-full">
             <label for="Email" class="[font-family:var(--font)] font-bold text-sm">მეილი *</label>
-            <input type="email" name="Email" id="Email" placeholder="john@example.com"
+            <input type="email" name="Email" id="Email" placeholder="john@example.com" [(ngModel)]="ContactFormCont.Email"
             class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
                 [font-family:var(--font)] font-medium text-sm">
+            @if (ContactFormErrors.Email !== '') {
+                <p class="[font-family:var(--font)] font-bold text-sm text-red-800">
+                    {{ContactFormErrors.Email}}
+                </p>
+            }
         </div>
         <!-- phone input -->
         <div class="input_cont flex gap-2 flex-col w-full">
             <label for="Phone_Number" class="[font-family:var(--font)] font-bold text-sm">ტელეფოლის ნომერი *</label>
-            <input type="tel" name="Phone_Number" id="Phone_Number" placeholder="599 XX XX XX"
+            <input type="tel" name="Phone_Number" id="Phone_Number" placeholder="599 XX XX XX" [(ngModel)]="ContactFormCont.Phone_Number"
             class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
                 [font-family:var(--font)] font-medium text-sm">
+            @if (ContactFormErrors.PhoneNumber !== '') {
+                <p class="[font-family:var(--font)] font-bold text-sm text-red-800">
+                    {{ContactFormErrors.PhoneNumber}}
+                </p>
+            }
         </div>
     </div>
     <div class="inputGroup flex gap-3 flex-col md:flex-row">
         <!-- Project Type input -->
         <div class="input_cont flex gap-2 flex-col w-full">
             <label for="Project_Type" class="[font-family:var(--font)] font-bold text-sm">პროექტის ტიპი *</label>
-            <select name="Project_Type" id="Project_Type" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
+            <select [(ngModel)]="ContactFormCont.Project_Type" name="Project_Type" id="Project_Type" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
             [font-family:var(--font)] font-medium text-sm">
                 <option class="[font-family:var(--font)] font-medium text-sm" value="" disabled selected>აირჩიეთ ტიპი</option>
-                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - დახურული</option>
-                <option class="[font-family:var(--font)] font-medium text-sm" value="">საცხოვრებელი - გარე</option>
-                <option class="[font-family:var(--font)] font-medium text-sm" value="">კომერციული</option>
-                <option class="[font-family:var(--font)] font-medium text-sm" value="">აღდგენა/განახლება</option>
-                <option class="[font-family:var(--font)] font-medium text-sm" value="">მხოლოდ კონსულტაცია</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="საცხოვრებელი - დახურული">საცხოვრებელი - დახურული</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="საცხოვრებელი - გარე">საცხოვრებელი - გარე</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="კომერციული">კომერციული</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="აღდგენა/განახლება">აღდგენა/განახლება</option>
+                <option class="[font-family:var(--font)] font-medium text-sm" value="მხოლოდ კონსულტაცია">მხოლოდ კონსულტაცია</option>
             </select>
+            @if (ContactFormErrors.ProjectType !== '') {
+                <p class="[font-family:var(--font)] font-bold text-sm text-red-800">
+                    {{ContactFormErrors.ProjectType}}
+                </p>
+            }
         </div>
         <!-- Project Timeline input -->
         <div class="input_cont flex gap-2 flex-col w-full">
             <label for="Project_Timeline" class="[font-family:var(--font)] font-bold text-sm">პროექტის ვადები</label>
             <select name="Project_Timeline" id="Project_Timeline" class="w-full h-[48px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg px-2
-            [font-family:var(--font)] font-medium text-sm">
+            [font-family:var(--font)] font-medium text-sm" [(ngModel)]="ContactFormCont.Project_Timeline">
                 <option class="[font-family:var(--font)] font-medium text-sm" value="">აირჩიეთ ვადები</option>
                 <option class="[font-family:var(--font)] font-medium text-sm" value="">რაც შეიძლება მალე</option>
                 <option class="[font-family:var(--font)] font-medium text-sm" value="">1-3 თვე</option>
@@ -53,10 +73,15 @@
     <!-- Project Details input -->
     <div class="input_cont flex gap-2 flex-col w-full">
         <label for="Project_Details" class="[font-family:var(--font)] font-bold text-sm">პროექტის დეტალები *</label>
-        <textarea name="Project_Details" id="Project_Details" placeholder="Tell us about your project, space dimensions, design preferences, and any specific requirements..."
+        <textarea name="Project_Details" id="Project_Details" [(ngModel)]="ContactFormCont.Project_Details" placeholder="Tell us about your project, space dimensions, design preferences, and any specific requirements..."
         class="w-full h-[140px] bg-[#f5f1e8] border border-stone-400/60 rounded-lg p-2 [font-family:var(--font)] font-medium text-sm resize-none"></textarea>
+        @if (ContactFormErrors.ProjectDetails !== '') {
+            <p class="[font-family:var(--font)] font-bold text-sm text-red-800">
+                {{ContactFormErrors.ProjectDetails}}
+            </p>
+        }
     </div>
 
-    <button class="send_message_form w-full h-[56px] rounded-lg bg-[var(--woodBrown)] [font-family:var(--font)] font-medium text-sm text-[var(--neutral100)] text-lg cursor-pointer"
+    <button class="send_message_form w-full h-[56px] rounded-lg bg-[var(--woodBrown)] [font-family:var(--font)] font-semibold text-sm text-[var(--neutral100)] text-lg cursor-pointer md:text-base"
             (click)="sendmessage()">Send Inquiry</button>
 </div>
